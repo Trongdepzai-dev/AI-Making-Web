@@ -149,7 +149,6 @@ Phát hành dưới **Giấy phép MIT** – Bạn có thể tự do sử dụng
 
 **B.Trọng** – Một lập trình viên đam mê sáng tạo, AI và nghệ thuật mã nguồn.  
 - [GitHub](https://github.com/Trongdepzai-dev)  
-- [LinkedIn](https://linkedin.com/in/your-profile)  
 
 > *Ý tưởng đóng góp? Hãy liên hệ với tôi bất cứ lúc nào!*
 
