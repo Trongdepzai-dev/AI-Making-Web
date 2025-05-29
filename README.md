@@ -1,6 +1,16 @@
+Để nâng cấp file README với các nút điều hướng cho các phần như **Giới thiệu**, **Tính năng nổi bật**, và **Chế độ hoạt động**, chúng ta sẽ thêm các liên kết điều hướng ở đầu file và cải tiến mục lục để người dùng dễ dàng nhấp vào từng phần. Dưới đây là phiên bản nâng cấp của README với các "nút" dưới dạng liên kết markdown, kết hợp biểu tượng emoji để tăng tính hấp dẫn và trực quan.
+
+---
+
 # 🌟 B.Trọng AI - Sân chơi Sáng tạo Mã nguồn & Giao diện Siêu Đẹp
 
 **B.Trọng AI** là một ứng dụng web tương tác độc đáo, nơi bạn có thể khai phá sức mạnh của AI để **tạo mã nguồn**, **thiết kế giao diện**, và **phát triển web**. Với giao diện thân thiện và các tính năng mạnh mẽ, dự án này mang đến trải nghiệm sáng tạo không giới hạn cho cả người mới bắt đầu lẫn lập trình viên dày dạn kinh nghiệm.
+
+---
+
+## 🔝 Nút Điều Hướng Nhanh
+| [🌟 Giới thiệu](#giới-thiệu) | [🚀 Tính năng nổi bật](#tính-năng-nổi-bật) | [🧭 Chế độ hoạt động](#chế-độ-hoạt-động) | [🛠️ Công cụ Nhà phát triển](#công-cụ-nhà-phát-triển-beta) |
+|------------------------------|--------------------------------------------|------------------------------------------|-----------------------------------------------------------|
 
 ---
 
@@ -26,7 +36,7 @@ Chào mừng bạn đến với **B.Trọng AI** – một không gian sáng t�
 
 ## 🚀 Tính năng nổi bật
 
-- 💬 **Trò chuyện tương tác**: Yêu cầu AI viết hoặc chỉnh sửa mã theo ý bạn.
+- 💬 **Trò chuyện tương tác**: Yêu cầu AI viết hoặc chỉnh sửa mã theo ý bạn.  
 - 🧠 **Hai chế độ thông minh**:  
   - *p5.js Mode*: Sáng tạo nghệ thuật tương tác và trò chơi.  
   - *Siêu Đẹp Mode*: Thiết kế giao diện web đẹp mắt, chuyên nghiệp.  
@@ -74,99 +84,50 @@ Tập trung vào thiết kế web chuyên nghiệp với:
   - **Flash Mode**: Tăng tốc phản hồi AI.  
 
 ### Tính năng độc đáo:  
-- ✨ **AI Morph & Evolve (p5.js)**:  
-  - Nhập "Chỉ thị Biến đổi" để yêu cầu AI nâng cấp mã.  
-  - AI giải thích và cập nhật mã trực tiếp.  
-- 🔒 **Làm rối mã JavaScript**:  
-  - `Cơ bản`: Xóa comment, nén khoảng trắng.  
-  - `Trung bình`: Đổi tên biến, mã hóa số.  
-  - `Nâng cao`: Mã hóa chuỗi, thêm logic giả.  
-  - `Cực mạnh (AOPs)`: Trộn logic, mã hóa sâu, thao tác prototype.  
+- ✨ **AI Morph & Evolve (p5.js)**: Nhập "Chỉ thị Biến đổi" để yêu cầu AI nâng cấp mã.  
+- 🔒 **Làm rối mã JavaScript**: Từ cơ bản (xóa comment) đến cực mạnh (mã hóa sâu).  
 - 🖼️ **Tạo ảnh (Imagen)**: Biến văn bản thành hình ảnh (cần API Key).  
-- 🎙️ **Nhập liệu giọng nói**: Dùng giọng nói để ra lệnh (yêu cầu quyền microphone).  
-- 🧠 **Xóa ngữ cảnh AI**: Làm mới hoàn toàn bộ nhớ AI.  
+- 🎙️ **Nhập liệu giọng nói**: Ra lệnh bằng giọng nói (yêu cầu quyền microphone).  
+- 🧠 **Xóa ngữ cảnh AI**: Làm mới bộ nhớ AI.  
 
 ---
 
 ## 🧪 Công nghệ sử dụng
 
-- **Frontend**:  
-  - `HTML5`, `CSS3`, `TypeScript`: Xây dựng giao diện và logic.  
-  - `Lit`: Web components nhẹ và nhanh.  
-  - `Marked`: Chuyển đổi markdown.  
-  - `Highlight.js`: Tô sáng cú pháp mã nguồn.  
-- **AI Backend**:  
-  - `@google/genai`: Tạo văn bản, mã, và hình ảnh (Gemini).  
-  - `openai`: Hỗ trợ model OpenAI (cần API Key).  
-- **Thư viện hỗ trợ**:  
-  - `p5.js`: Nghệ thuật tương tác.  
-  - `Tailwind CSS`: Thiết kế giao diện nhanh.  
-  - `GSAP`: Animation mượt mà.  
-  - `Three.js`: Đồ họa 3D (qua CDN).  
+- **Frontend**: `HTML5`, `CSS3`, `TypeScript`, `Lit`, `Marked`, `Highlight.js`.  
+- **AI Backend**: `@google/genai` (Gemini), `openai` (OpenAI).  
+- **Thư viện hỗ trợ**: `p5.js`, `Tailwind CSS`, `GSAP`, `Three.js`.  
 
 ---
 
 ## 📦 Hướng dẫn sử dụng
 
-1. **Clone repository**:  
-   ```bash
-   git clone https://github.com/your-username/btrong-ai.git
-   ```
-2. **Di chuyển đến thư mục**:  
-   ```bash
-   cd btrong-ai
-   ```
-3. **Cài đặt thư viện**:  
-   ```bash
-   npm install
-   ```
-4. **Chạy server cục bộ**:  
-   ```bash
-   npm run dev
-   ```
-5. **Truy cập ứng dụng**:  
-   Mở trình duyệt tại `http://localhost:5173`.
+1. **Clone repository**: `git clone https://github.com/your-username/btrong-ai.git`  
+2. **Di chuyển đến thư mục**: `cd btrong-ai`  
+3. **Cài đặt thư viện**: `npm install`  
+4. **Chạy server cục bộ**: `npm run dev`  
+5. **Truy cập**: Mở `http://localhost:5173` trên trình duyệt.
 
 ---
 
 ## 🔐 Ghi chú về API Key
 
-- **Không có giao diện nhập API Key trực tiếp**.  
-- Cấu hình qua biến môi trường trong file `.env`:  
+- Cấu hình qua file `.env`:  
   - `process.env.API_KEY` (Gemini).  
   - `process.env.OPENAI_API_KEY` (OpenAI).  
-- **Model placeholder** (DeepSeek, Grok, Claude, Llama): Cần tự cấu hình API Key tương ứng.  
+- Model placeholder (DeepSeek, Grok, v.v.) cần API Key riêng.
 
 ---
 
 ## 📜 Giấy phép
 
-Phát hành dưới **Giấy phép MIT** – Bạn có thể tự do sử dụng, chỉnh sửa và chia sẻ mã nguồn.
+Phát hành dưới **Giấy phép MIT**.
 
 ---
 
 ## 🧑‍💻 Tác giả
 
-**B.Trọng** – Một lập trình viên đam mê sáng tạo, AI và nghệ thuật mã nguồn.  
-- [GitHub](https://github.com/your-username)  
-- [LinkedIn](https://linkedin.com/in/your-profile)  
-
-> *Ý tưởng đóng góp? Hãy liên hệ với tôi bất cứ lúc nào!*
+**B.Trọng** – Lập trình viên đam mê AI và nghệ thuật mã nguồn.  
+- [GitHub](https://github.com/Trongdepzai-dev)   
 
 ---
-
-**B.Trọng AI** – Nơi sáng tạo không có giới hạn! 🌟
-
-
----
-
-### Các cải tiến chính:
-1. **Giới thiệu**: Viết lại để nhấn mạnh sự sáng tạo và tính nghệ thuật, làm nổi bật giá trị của dự án.
-2. **Cấu trúc**: Sử dụng tiêu đề, phụ đề và emoji để tăng tính trực quan, dễ điều hướng.
-3. **Tính năng**: Mô tả ngắn gọn, sinh động với biểu tượng minh họa.
-4. **Chế độ hoạt động**: Thêm ví dụ cụ thể để người dùng dễ hình dung.
-5. **Công cụ Nhà phát triển**: Chi tiết hơn, nhấn mạnh tính độc đáo của từng tính năng.
-6. **Hướng dẫn sử dụng**: Bổ sung bước clone repository và trình bày rõ ràng hơn.
-7. **Thiết kế**: Tận dụng markdown để định dạng đẹp mắt, dễ đọc.
-
-Phiên bản này không chỉ "xịn" hơn mà còn chuyên nghiệp và thân thiện với người dùng! Bạn có thể thêm hình ảnh hoặc GIF minh họa để tăng sức hút nếu muốn.
