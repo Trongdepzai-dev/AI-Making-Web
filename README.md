@@ -96,6 +96,8 @@ npm install
 
 # 3. Chạy server cục bộ
 npm run dev
+````
+
 Truy cập trình duyệt tại `http://localhost:5173`
 ## 🔐 Ghi chú về API Key
 
