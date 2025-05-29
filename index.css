@@ -1,0 +1,893 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  display: flex;
+  font-family: 'Google Sans Text', 'Google Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0;
+  overflow: hidden;
+
+  --color-bg: light-dark(#fff, #121212);
+  --color-text: light-dark(#202124, #e8eaed);
+
+  --color-inv-bg: light-dark(#202124, #e8eaed);
+  --color-inv-text: light-dark(#e8eaed, #202124);
+  --color-inv-bg2: light-dark(#5f6368, #a1a1a1);
+  --color-inv-text2: light-dark(#e8eaed, #202124);
+
+  --color-accent: light-dark(#1a73e8, #8ab4f8);
+  --color-accent2: light-dark(#4285f4, #aecbfa);
+  --color-accent-disabled: light-dark(#bdc1c6, #5f6368);
+  --color-accent-text: light-dark(#fff, #202124);
+  --color-sidebar-border: light-dark(#dadce0, #3c4043);
+
+  --color-bg2: light-dark(#f1f3f4, #202124); /* Slightly off-white/darker gray */
+  --color-text2: light-dark(#3c4043, #bdc1c6); /* Darker text on light, lighter on dark */
+  --color-bg3: light-dark(#e8eaed, #2d2e30); /* Lighter gray on light, slightly lighter dark */
+  --color-text3: light-dark(#5f6368, #9aa0a6); /* Medium gray text */
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+
+  --code-bg: #282c34; /* One Dark Pro like */
+  --code-text: #abb2bf;
+
+  --code-editor-bg: var(--color-bg2);
+  --code-editor-text: var(--color-text2);
+
+  --color-error-bg: light-dark(#fdecea, #5c2b29);
+  --color-error-text: light-dark(#c5221f, #f9a9a7);
+}
+
+.playground {
+  border-top: 1px solid var(--color-sidebar-border);
+}
+
+
+textarea {
+  border: 1px solid var(--color-sidebar-border);
+  border-radius: 4px;
+  padding: 8px;
+  overflow: auto;
+  outline: none;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  width: 100%;
+  font-family: inherit;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: vertical;
+}
+
+.hidden {
+  display: none!important;
+}
+
+#editor textarea {
+  font-family: "Inconsolata", monospace;
+}
+
+#root,
+.playground {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.playground {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 400px; /* Default width */
+  min-width: 320px; /* Min width before collapsing further */
+  max-width: 50%; /* Max width for larger screens */
+  flex-shrink: 0;
+  overflow: hidden;
+  border-right: 1px solid var(--color-sidebar-border, #ddd);
+  background-color: var(--color-bg);
+}
+
+.selector {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  padding: 0 0.5em;
+  border-bottom: 1px solid var(--color-sidebar-border, #ddd);
+  background-color: var(--color-bg2);
+}
+
+.selector button {
+  display: flex;
+  gap: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 14px; /* Adjusted padding */
+  transition: 0.3s;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  color: var(--color-text2);
+  font-size: 0.9em;
+  flex-grow: 1; /* Allow buttons to grow */
+  text-align: center;
+}
+
+.selector button:hover {
+  background-color: var(--color-bg3);
+  color: var(--color-text);
+}
+
+.selected-tab, .selector button.active { 
+  background: var(--color-bg);
+  border-bottom: 3px solid var(--color-accent) !important;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.showtab {
+  display: flex!important;
+  flex-direction: column; 
+  overflow: hidden; 
+  flex: 1; 
+  background-color: var(--color-bg);
+}
+
+
+.toolbar {
+  height: 60px; /* Reduced height */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--color-sidebar-border, #ddd);
+  background-color: var(--color-bg2);
+  padding: 0 10px; /* Add some padding */
+  flex-shrink: 0;
+}
+
+.toolbar button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px; /* Square padding for icons */
+  transition: 0.3s;
+  background: transparent;
+  color: var(--color-accent);
+  border-radius: 4px;
+  display: flex; /* For aligning icon and label */
+  align-items: center;
+  gap: 5px; /* Space between icon and label */
+}
+.toolbar button svg {
+  width: 24px; /* Consistent icon size */
+  height: 24px;
+}
+
+.toolbar button:hover {
+  background-color: var(--color-bg3);
+  color: var(--color-accent2);
+}
+
+.toolbar button.disabled {
+  color: var(--color-accent-disabled);
+  background-color: transparent;
+  cursor: not-allowed;
+}
+.toolbar button.disabled:hover {
+  background-color: transparent;
+}
+
+
+#reloadCode {
+  margin-right: auto; /* Pushes run/stop/reset to center/right */
+}
+
+#clear {
+  margin-left: auto; /* Pushes run/stop/reset to center/right */
+}
+.toolbar .button-label p {
+    font-size: 0.85em;
+}
+
+
+#chat {
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#chat .footer { 
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-sidebar-border);
+  background-color: var(--color-bg2); /* Match input area bg */
+  flex-shrink: 0;
+}
+
+
+textarea#messageInput { 
+  flex: 1;
+  min-height: 30px;
+  height: auto; 
+  width: 100%;
+  border: 1px solid var(--color-sidebar-border); 
+  font-family: inherit;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: var(--color-bg2); /* Background for the preview area */
+  overflow: hidden; /* Ensure iframe doesn't cause overflow */
+}
+
+main { /* This is the iframe container in this app */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  overflow: hidden; /* Ensure iframe is contained */
+}
+
+.chat-messages {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em; /* Slightly reduced gap */
+  padding: 12px; /* Consistent padding */
+  scroll-behavior: smooth;
+
+  * {
+  overflow-anchor: none;
+  }
+}
+
+#chatStatus {
+  background: var(--color-bg3);
+  padding: 0.5em 1em; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-weight: bold;
+  color: var(--color-text2);
+  border-bottom: 1px solid var(--color-sidebar-border); 
+  font-size: 0.9em;
+}
+
+#chatStatus svg {
+  margin-right: 8px;
+}
+
+@-webkit-keyframes rotating {
+  from { -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes rotating {
+  from { -ms-transform: rotate(0deg); -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); -moz-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+.rotating {
+  -webkit-animation: rotating 1s linear infinite;
+  -moz-animation: rotating 1s linear infinite;
+  -ms-animation: rotating 1s linear infinite;
+  -o-animation: rotating 1s linear infinite;
+  animation: rotating 1s linear infinite;
+}
+
+
+#inputArea {
+  display: flex;
+  padding: 10px 12px; /* Slightly reduced padding */
+  min-height: 60px; 
+  align-items: center; 
+  background-color: var(--color-bg2);
+}
+
+#messageInput {
+  flex-grow: 1;
+  padding: 10px 16px;
+  border: 1px solid var(--color-sidebar-border); 
+  border-radius: 20px; /* Pill shape */
+  margin-right: 8px;
+  font-size: 1em;
+  background: var(--color-bg); /* Match body bg for input */
+  color: var(--color-text);
+  resize: none; 
+  min-height: 24px; 
+  line-height: 1.4;
+  font-family: inherit;
+}
+
+#messageInput:focus{
+  outline: 2px solid var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+#sendButton {
+  padding: 0; /* Remove padding, rely on width/height and flex centering */
+  height: 44px; /* Consistent height with input */
+  width: 44px; 
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+  border: none;
+  border-radius: 50%; /* Circular button */
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+#sendButton svg {
+    width: 24px;
+    height: 24px;
+}
+
+#sendButton:hover {
+  background-color: var(--color-accent2);
+}
+
+#sendButton.disabled {
+  background-color: var(--color-accent-disabled);
+  cursor: not-allowed;
+}
+
+
+#anchor {
+  overflow-anchor: auto;
+  height: 1px; 
+}
+
+
+#editor {
+  position: relative;
+  overflow: auto;
+  background-color: var(--code-bg); /* Use code specific bg */
+  flex-direction: column;
+  flex: 1;
+
+  header {
+    flex: 0;
+  }
+
+  .code-container {
+    width: max-content;
+    min-width: 100%; 
+    min-height: 100%; 
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+  }
+
+  .code-syntax,
+  .code-editor {
+    flex: 1 1 100%;
+    white-space: pre;
+    font-family: "Inconsolata", "Courier New", monospace;
+    font-size: 14px;
+    padding: 14px; 
+    margin: 0; 
+    line-height: 1.5; 
+  }
+  .code-syntax {
+    pointer-events: none;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: var(--code-text); 
+    background-color: transparent; /* Ensure it doesn't obscure editor bg */
+  }
+  .code-editor { 
+    background: transparent; /* Editor is transparent over code-bg of #editor */
+    color: transparent; 
+    caret-color: var(--code-text);
+    position: relative; 
+    z-index: 2; 
+    border: none; 
+    outline: none;
+    overflow: auto; 
+    width: 100%; 
+    height: 100%; 
+    resize: none; 
+  }
+}
+
+
+.turn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Reduced gap */
+  padding: 10px 14px; /* Adjusted padding */
+  border-radius: 12px; /* Softer radius */
+  max-width: 90%; /* Slightly wider max */
+  word-wrap: break-word;
+  font-size: 0.95em; /* Slightly smaller chat font */
+
+  .thinking { 
+    font-style: normal;
+    background: var(--color-bg3);
+    color: var(--color-text3);
+    border-radius: 8px;
+    padding: 0.6em 0.8em;
+    margin-top: 4px;
+    font-size: 0.9em;
+    p { margin: 0.5rem 0; }
+  }
+  .thinking.hidden { display: none !important; }
+}
+
+
+.role-user {
+    background-color: var(--color-accent);
+    color: var(--color-accent-text);
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+    details.thinking { display: none; }
+}
+
+.role-assistant {
+    background-color: var(--color-bg2);
+    color: var(--color-text); /* Use main text color for better contrast */
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.role-system, .role-system-ask { 
+  background-color: var(--color-bg3);
+  color: var(--color-text3);
+  border: 1px solid var(--color-sidebar-border);
+  align-self: center; 
+  max-width: 95%;
+  border-radius: 8px; 
+  text-align: center;
+  font-size: 0.85em;
+  details.thinking { display: none; }
+}
+.role-system button, .role-system-ask button {
+  font-size: 0.9em;
+  padding: 6px 10px;
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+}
+.role-system button:hover, .role-system-ask button:hover {
+  background-color: var(--color-accent2);
+}
+
+
+.role-error {
+  background-color: var(--color-error-bg);
+  color: var(--color-error-text);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+  max-width: 95%;
+  details.thinking { display: none; }
+}
+
+canvas { /* For p5.js, ensure it's contained */
+  display: block; /* Remove extra space below canvas */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* If canvas itself has fixed size */
+}
+
+
+/* Markdown */
+.turn > .text > p { 
+  font-size: 1rem; /* Relative to parent .turn */
+  margin-bottom: 0.8rem; 
+}
+.turn > .text > p:last-child { margin-bottom: 0; }
+
+.turn .text { 
+  line-height: 1.5;
+  a { color: var(--color-accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  li { margin-left: 1.2rem; margin-bottom: 0.4rem; }
+  li:last-child { margin-bottom: 0; }
+
+  pre, code {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    border-radius: 4px;
+    padding: 0.2em 0.4em; 
+    font-family: "Inconsolata", "Courier New", monospace;
+    font-size: 0.9em; 
+    border: 1px solid var(--color-sidebar-border); /* Subtle border for inline code */
+  }
+
+  pre {
+    overflow: auto;
+    padding: 0.8em; /* Consistent padding */
+    font-size: 0.85em; 
+    margin: 0.5em 0;
+  }
+}
+
+.preview-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* Default iframe bg, can be overridden by content */
+  display: block; /* Ensure it takes full space */
+}
+
+.button-label { position: relative; }
+.button-tooltip {
+  position: absolute; /* Changed from relative */
+  bottom: 100%; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%) translateY(-5px); /* Center and add small gap */
+  pointer-events: none;
+  cursor: default;
+  transition: opacity 0.2s, transform 0.2s;
+  opacity: 0;
+  z-index: 10;
+
+  p {
+    background: var(--color-inv-bg);
+    color: var(--color-inv-text);
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 0.85em; /* Smaller tooltip text */
+    width: max-content;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+}
+.toolbar button:hover .button-tooltip,
+.toolbar button:focus .button-tooltip, /* Show on focus too for accessibility */
+.button-tooltip.show-tooltip { /* Keep show-tooltip for explicit control */
+  opacity: 1.0;
+  transform: translateX(-50%) translateY(-10px); /* Move up slightly more on show */
+}
+
+
+.turn button {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  box-shadow: none;
+  border: none;
+  border-radius: 6px; /* Standardized radius */
+  padding: 8px 12px; 
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 8px; 
+  font-size: 0.9em;
+}
+
+
+.turn button:hover { background-color: var(--color-accent2); }
+.turn button.disabled {
+  color: var(--color-accent-disabled);
+  background-color: var(--color-bg3); 
+  cursor: not-allowed;
+}
+
+#appMessages {
+  display: flex;
+  position: absolute;
+  bottom: 70px;
+  width: 100%;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  pointer-events: none; /* Messages should not be interactive */
+}
+
+/* Dev Tools Panel Styles */
+.dev-tools-panel {
+  padding: 15px;
+  background-color: var(--color-bg2);
+  border-top: 1px solid var(--color-sidebar-border);
+  max-height: 35vh; /* Adjusted max height */
+  overflow-y: auto;
+  font-size: 0.9em;
+}
+
+.dev-tools-panel h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--color-text);
+  font-size: 1.1em;
+}
+
+.dev-tools-section {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--color-sidebar-border);
+}
+.dev-tools-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.dev-tools-section h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--color-text2);
+  font-size: 1em;
+}
+/* Ensure icon in h4 is aligned with text */
+.dev-tools-section h4 svg {
+  vertical-align: middle;
+  margin-right: 4px;
+  height: 1em; /* Match font size */
+  width: 1em;  /* Match font size */
+}
+
+
+.dev-tools-section textarea,
+.dev-tools-section input[type="text"],
+.dev-tools-section input[type="number"],
+.dev-tools-section select { /* Added select styling */
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid var(--color-sidebar-border);
+  border-radius: 4px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: 0.95em; /* Consistent input font size */
+  font-family: inherit;
+}
+.dev-tools-section .dev-tool-control {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Gap between label and control */
+}
+.dev-tools-section .dev-tool-control label {
+  flex-shrink: 0; 
+  color: var(--color-text2);
+}
+.dev-tools-section .dev-tool-control input[type="checkbox"] { margin-right: 0; } /* Removed margin, use gap from parent */
+.dev-tools-section .dev-tool-control input[type="number"] {
+  width: 80px; /* Fixed width for number inputs */
+  flex-grow: 0; /* Don't grow */
+}
+.dev-tools-section .dev-tool-control select {
+    flex-grow: 1; /* Allow select to take available space */
+}
+/* Specific styling for Infinite Power input to ensure it fills width */
+#infinitePowerSection .dev-tool-control input[type="text"] {
+  flex-grow: 1;
+}
+
+
+.dev-tools-section button {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-right: 8px; 
+  margin-top: 5px; 
+  font-size: 0.9em;
+  display: inline-flex; /* For icon alignment */
+  align-items: center;
+  gap: 5px;
+}
+.dev-tools-section button svg {
+  width: 16px; /* Smaller icon for dev tools buttons */
+  height: 16px;
+}
+.dev-tools-section button:hover { background-color: var(--color-accent2); }
+.dev-tools-section button:disabled { background-color: var(--color-accent-disabled); cursor: not-allowed; }
+
+.dev-tools-section .generated-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--color-sidebar-border);
+}
+.dev-tools-section .voice-status {
+  font-size: 0.9em;
+  margin-top: 5px;
+  color: var(--color-text3);
+}
+.dev-tools-section p em { color: var(--color-text3); font-size: 0.9em; }
+
+/* Styles for AI-requested images in chat */
+.ai-image-placeholder {
+  font-style: italic;
+  color: var(--color-text3);
+  padding: 10px;
+  border: 1px dashed var(--color-sidebar-border);
+  border-radius: 4px;
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+.ai-generated-image-inline {
+  max-width: 100%;
+  max-height: 200px; 
+  border-radius: 4px;
+  margin: 5px 0;
+  display: block; 
+  border: 1px solid var(--color-sidebar-border);
+}
+.ai-image-error {
+  color: var(--color-error-text);
+  background-color: var(--color-error-bg);
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* More detailed Media Queries for Responsiveness */
+
+/* Tablet and larger mobiles (landscape) */
+@media only screen and (max-width : 900px) {
+  .sidebar {
+    width: 350px; /* Slightly narrower for tablets */
+  }
+  .toolbar .button-label p {
+    display: none; /* Hide text label on smaller toolbars */
+  }
+  .toolbar button {
+    padding: 6px; /* More compact buttons */
+  }
+  #reloadCode, #clear {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .dev-tools-section .dev-tool-control {
+    flex-direction: column; /* Stack label and control on smaller screens */
+    align-items: flex-start;
+  }
+  .dev-tools-section .dev-tool-control input[type="number"],
+  .dev-tools-section .dev-tool-control select,
+  .dev-tools-section .dev-tool-control input[type="text"] { /* Ensure full width for these inputs */
+    width: 100%;
+  }
+}
+
+
+/* Mobile phones (portrait) */
+@media only screen and (max-width : 767px) {
+  .playground {
+    flex-direction: column-reverse; /* Stack preview above sidebar */
+  }
+  .sidebar {
+    width: 100%; /* Full width */
+    max-width: 100%;
+    height: 55vh; /* Sidebar takes up part of the screen */
+    min-height: 300px; /* Minimum height for sidebar */
+    border-right: none;
+    border-top: 1px solid var(--color-sidebar-border); /* Border on top when stacked */
+  }
+  .main-container { 
+    height: 45vh; /* Preview area takes the rest */
+  }
+  .selector button {
+    padding: 10px 8px;
+    font-size: 0.85em;
+  }
+  .toolbar {
+    height: 50px; /* Smaller toolbar */
+    border-bottom: 1px solid var(--color-sidebar-border, #ddd);
+    border-top: none; 
+  }
+  .toolbar button svg {
+    width: 20px;
+    height: 20px;
+  }
+  #inputArea {
+    padding: 8px;
+    min-height: 50px;
+  }
+  #messageInput {
+    padding: 8px 12px;
+    font-size: 0.95em;
+  }
+  #sendButton {
+    height: 40px;
+    width: 40px;
+  }
+  #sendButton svg {
+    width: 20px;
+    height: 20px;
+  }
+  .dev-tools-panel {
+    max-height: 40vh; /* Allow a bit more height on mobile if sidebar is main focus */
+    font-size: 0.85em;
+  }
+  .dev-tools-section .dev-tool-control {
+    flex-direction: column; /* Stack label and control on smaller screens */
+    align-items: flex-start;
+  }
+  .dev-tools-section .dev-tool-control input[type="number"],
+  .dev-tools-section .dev-tool-control select,
+  .dev-tools-section .dev-tool-control input[type="text"] { /* Ensure full width for these inputs */
+    width: 100%;
+  }
+  .turn {
+    max-width: 95%;
+    font-size: 0.9em;
+  }
+  /* Ensure selected tab is visible if others are display:none */
+  #editor:not(.showtab), #chat:not(.showtab) { 
+    display: none!important;
+  }
+}
+
+
+/**
+ * Code Syntax Highlighting (StackOverflow Dark)
+ *****************************************************************************/
+
+ pre code.hljs { display: block; overflow-x: auto; padding: 1em }
+ code.hljs { padding: 3px 5px }
+ 
+ .hljs { color: #abb2bf; background: #282c34 } /* One Dark Pro colors */
+ .hljs-comment, .hljs-quote { color: #5c6370; font-style: italic }
+ .hljs-doctag, .hljs-keyword, .hljs-formula { color: #c678dd } /* magenta */
+ .hljs-section, .hljs-name, .hljs-selector-tag, .hljs-deletion, .hljs-subst { color: #e06c75 } /* red */
+ .hljs-literal { color: #56b6c2 } /* cyan for literals like true, false, null */
+ .hljs-string, .hljs-regexp, .hljs-addition, .hljs-attribute, .hljs-meta .hljs-string { color: #98c379 } /* green */
+ .hljs-attr, .hljs-variable, .hljs-template-variable, .hljs-type, .hljs-selector-class, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-number { color: #d19a66 } /* orange/gold */
+ .hljs-symbol, .hljs-bullet, .hljs-link, .hljs-meta .hljs-keyword, .hljs-selector-id { color: #61afef } /* blue */
+ .hljs-built_in, .hljs-title, .hljs-class .hljs-title { color: #e5c07b } /* yellow/gold for built-ins and titles */
+ .hljs-emphasis { font-style: italic }
+ .hljs-strong { font-weight: bold }
+ .hljs-link { text-decoration: underline }
