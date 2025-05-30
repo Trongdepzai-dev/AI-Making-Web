@@ -1,4 +1,4 @@
-# 🌟 B.Trọng AI - Sân chơi Sáng tạo Mã nguồn & Giao diện Siêu Đẹp
+# 🌟 B.Trọng AI
 
 **B.Trọng AI** là một ứng dụng web tương tác độc đáo, nơi bạn có thể khai phá sức mạnh của AI để **tạo mã nguồn**, **thiết kế giao diện**, và **phát triển web**. Với giao diện thân thiện và các tính năng mạnh mẽ, dự án này mang đến trải nghiệm sáng tạo không giới hạn cho cả người mới bắt đầu lẫn lập trình viên dày dạn kinh nghiệm.
 
