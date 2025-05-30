@@ -14,10 +14,6 @@
   <img src="https://img.shields.io/github/languages/code-size/Trongdepzai-dev/AI-Making-Web?style=for-the-badge" alt="Code size" />
 </p>
 
-
-
-
-
 **B.Trọng AI** – *Thế giới nơi mã nguồn và trí tuệ nhân tạo hòa quyện thành nghệ thuật!*
 Đây là một **ứng dụng web sáng tạo và tương tác thời gian thực**, nơi bạn có thể xây dựng giao diện, viết mã, tạo hiệu ứng 3D hoặc vẽ tranh bằng mã lệnh – tất cả dưới sự hỗ trợ thông minh từ AI.
 
@@ -27,17 +23,16 @@
 
 > 🧭 Nhấp vào để điều hướng nhanh
 
-1. [🎯 Giới thiệu](#giới-thiệu)
-2. [🚀 Tính năng nổi bật](#tính-năng-nổi-bật)
-3. [🧭 Chế độ hoạt động](#chế-độ-hoạt-động)
-4. [🛠️ Công cụ Nhà phát triển (Beta)](#công-cụ-nhà-phát-triển-beta)
-5. [🔧 Công nghệ sử dụng](#công-nghệ-sử-dụng)
-6. [📦 Cài đặt & Sử dụng](#cài-đặt--sử-dụng)
-7. [🔐 Cấu hình API Key](#cấu-hình-api-key)
-8. [🧪 Ví dụ & Demo](#ví-dụ--demo)
-9. [📜 Giấy phép](#giấy-phép)
-10. [🧑‍💻 Tác giả & Liên hệ](#tác-giả--liên-hệ)
-
+1. [Gioi thieu](#gioi-thieu)
+2. [Tinh nang noi bat](#tinh-nang-noi-bat)
+3. [Che do hoat dong](#che-do-hoat-dong)
+4. [Cong cu nha phat trien (Beta)](#cong-cu-nha-phat-trien-beta)
+5. [Cong nghe su dung](#cong-nghe-su-dung)
+6. [Cai dat & Su dung](#cai-dat--su-dung)
+7. [Cau hinh API Key](#cau-hinh-api-key)
+8. [Vi du & Demo](#vi-du--demo)
+9. [Giay phep](#giay-phep)
+10. [Tac gia & Lien he](#tac-gia--lien-he)
 ---
 
 ## 🎯 Giới thiệu
