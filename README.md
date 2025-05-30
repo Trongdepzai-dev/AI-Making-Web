@@ -1,25 +1,30 @@
-
----
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=800&color=F97316&width=435&lines=Ch%C3%A0o+m%E1%BB%ABng+%C4%91%E1%BA%BFn+B.Tr%E1%BB%8Dng+AI!;S%C3%A1ng+t%E1%BA%A1o+v%E1%BB%9Bi+p5.js+v%C3%A0+Three.js;Tr%C3%B2+chuy%E1%BB%87n+v%E1%BB%9Bi+AI+%E2%9C%A8;Thi%E1%BA%BFt+k%E1%BA%BF+UI+%C4%91%E1%BA%B9p+%2B+code+ch%E1%BA%A1y+th%E1%BA%ADt" alt="Typing SVG" />
+</p>
 
 # ✨ B.Trọng AI
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 
-Chào mừng đến với **B.Trọng AI** – **một thế giới mã nguồn đầy màu sắc**, nơi bạn không chỉ viết code, mà còn **vẽ nên tác phẩm nghệ thuật bằng trí tuệ nhân tạo**. Đây là một ứng dụng web tương tác, nơi bất kỳ ai – từ người mới học cho đến lập trình viên kỳ cựu – đều có thể **khai phá sức mạnh của AI để sáng tạo, thiết kế và phát triển web hiện đại**.
+
+**B.Trọng AI** – *Thế giới nơi mã nguồn và trí tuệ nhân tạo hòa quyện thành nghệ thuật!*
+Đây là một **ứng dụng web sáng tạo và tương tác thời gian thực**, nơi bạn có thể xây dựng giao diện, viết mã, tạo hiệu ứng 3D hoặc vẽ tranh bằng mã lệnh – tất cả dưới sự hỗ trợ thông minh từ AI.
 
 ---
 
 ## 📌 Mục lục
 
-> Nhấp vào để đến phần bạn quan tâm 💨
+> 🧭 Nhấp vào để điều hướng nhanh
 
 1. [🎯 Giới thiệu](#giới-thiệu)
 2. [🚀 Tính năng nổi bật](#tính-năng-nổi-bật)
 3. [🧭 Chế độ hoạt động](#chế-độ-hoạt-động)
 4. [🛠️ Công cụ Nhà phát triển (Beta)](#công-cụ-nhà-phát-triển-beta)
 5. [🔧 Công nghệ sử dụng](#công-nghệ-sử-dụng)
-6. [📦 Hướng dẫn sử dụng](#hướng-dẫn-sử-dụng)
-7. [🔐 Ghi chú về API Key](#ghi-chú-về-api-key)
-8. [📜 Giấy phép](#giấy-phép)
-9. [🧑‍💻 Tác giả](#tác-giả)
+6. [📦 Cài đặt & Sử dụng](#cài-đặt--sử-dụng)
+7. [🔐 Cấu hình API Key](#cấu-hình-api-key)
+8. [🧪 Ví dụ & Demo](#ví-dụ--demo)
+9. [📜 Giấy phép](#giấy-phép)
+10. [🧑‍💻 Tác giả & Liên hệ](#tác-giả--liên-hệ)
 
 ---
 
@@ -27,140 +32,144 @@ Chào mừng đến với **B.Trọng AI** – **một thế giới mã nguồn 
 
 > 💡 “Khi AI gặp nghệ thuật lập trình, điều kỳ diệu bắt đầu!”
 
-**B.Trọng AI** không chỉ là một công cụ, mà là **một cộng sự sáng tạo đích thực**. Bạn có thể trò chuyện trực tiếp với AI, yêu cầu viết mã, chỉnh sửa thiết kế, hoặc xây dựng cả một giao diện hoàn chỉnh.
+**B.Trọng AI** là một nền tảng giúp bạn:
 
-* Tạo **nghệ thuật tương tác với p5.js** 🎨
-* Thiết kế **trang web hiện đại, siêu đẹp với Tailwind, JS và 3D** 💻✨
-
-Dù bạn là người mới hay lập trình viên chuyên nghiệp, đây sẽ là **nơi nuôi dưỡng cảm hứng, thử nghiệm ý tưởng và phát triển kỹ năng** mỗi ngày.
+* **Tương tác trực tiếp với AI** để viết code, thiết kế UI, tạo hình ảnh và hoạt hình.
+* Chọn **chế độ sáng tạo** phù hợp: `p5.js` cho nghệ thuật thị giác và `Siêu Đẹp Mode` cho giao diện web lung linh.
+* Thử nghiệm, học hỏi, và phát triển kỹ năng frontend + AI mỗi ngày.
 
 ---
 
 ## 🚀 Tính năng nổi bật
 
-* 🧑‍💻 **Trò chuyện trực tiếp với AI** – Nhập yêu cầu → Nhận mã nguồn → Chạy thử ngay!
-* 🎨 **Hai chế độ sáng tạo độc đáo**:
-
-  * `p5.js Mode`: Vẽ, tương tác, chơi với hình ảnh và animation.
-  * `Siêu Đẹp Mode`: Tạo giao diện lung linh, responsive chuẩn chuyên nghiệp.
-* 🖍️ **Trình soạn thảo hiện đại**: Hỗ trợ tô sáng cú pháp + gợi ý mã.
-* 🔄 **Preview thời gian thực** – Không cần reload thủ công.
-* 🧹 **Đặt lại tất cả** – Làm sạch môi trường chỉ với 1 cú click.
-* 🧪 **Công cụ dev ẩn** – Mở ra thế giới cấu hình chuyên sâu!
-* 📱 **Responsive mọi nền tảng** – Từ desktop đến mobile đều mượt mà.
+✅ **Trò chuyện với AI** – Viết mã, nhận phản hồi, chạy thử ngay
+🎨 **Hai chế độ sáng tạo** – Cho trải nghiệm học lập trình thú vị
+🧠 **AI phân tích mã và gợi ý nâng cấp**
+⚡ **Xem trước kết quả theo thời gian thực**
+🎛️ **Chuyển đổi cấu hình nhanh chóng** (model AI, ngôn ngữ, nhiệt độ...)
+📱 **Thiết kế responsive, hỗ trợ desktop & mobile**
+🔐 **Bảo mật API Key qua `.env .local`**
 
 ---
 
 ## 🧭 Chế độ hoạt động
 
-### 🎨 Chế độ 1: p5.js Mode – Nghệ thuật sống trong mã
+### 🎨 Chế độ 1: `p5.js Mode` – Nghệ thuật tương tác
 
-* Tạo **hình ảnh động**, vũ trụ nhấp nháy, dòng sông fractal...
-* Lập trình **trò chơi mini** như Pong, Snake, Breakout.
-* Trải nghiệm **AI nâng cấp mã ngay trong khung làm việc**.
+* Lập trình hình ảnh động, hiệu ứng fractal, trò chơi đơn giản.
+* Tạo tranh số (generative art) bằng code.
+* Nhận phản hồi & gợi ý từ AI để cải tiến trực tiếp.
 
-🧪 **Ví dụ**:
-
-```javascript
-// Một bầu trời đầy sao
+```js
+// Ví dụ: Bầu trời đầy sao
 ellipse(random(width), random(height), 2, 2);
 ```
 
 ---
 
-### 💎 Chế độ 2: Siêu Đẹp Mode – Web Design Thăng Hoa
+### 💎 Chế độ 2: `Siêu Đẹp Mode` – UI/UX sáng tạo
 
-* Dùng **HTML + Tailwind CSS + JS** để tạo UI lung linh, hiện đại.
-* Hỗ trợ thư viện: **GSAP** (animation), **Three.js** (đồ họa 3D).
-* Hoàn hảo cho landing page, portfolio, hiệu ứng cuộn 3D,...
-
-🧪 **Ví dụ**:
-Trang giới thiệu 3D với hiệu ứng **cuộn tầng mây, nhấp nháy ánh sáng** – chỉ cần mô tả, AI làm phần còn lại.
+* Tạo landing page, portfolio, hiệu ứng scroll 3D.
+* Kết hợp **HTML**, **Tailwind CSS**, **GSAP**, **Three.js** để tạo giao diện sống động.
+* Tối ưu cho web hiện đại và mobile-first.
 
 ---
 
 ## 🛠️ Công cụ Nhà phát triển (Beta)
 
-> 👀 Bật ẩn menu bằng cách **nhấn 7 lần vào tiêu đề “B.Trọng AI”**
+> ⚠️ Mở menu ẩn bằng cách **nhấn 7 lần vào tiêu đề “B.Trọng AI”**
 
-### ⚙️ Cấu hình nâng cao:
+### ⚙️ Cấu hình & Tùy chọn
 
-* Chọn **model AI**: Gemini / OpenAI / DeepSeek / Claude...
-* Tùy chỉnh **nhiệt độ, top-K, top-P** → quyết định phong cách phản hồi.
-* Chuyển đổi **chế độ p5.js / Siêu Đẹp** dễ dàng.
-* Bật/tắt **Sinh ảnh (text-to-image)**.
+* Chọn model AI: `Gemini`, `OpenAI`, `Claude`, `DeepSeek`, v.v.
+* Tùy chỉnh thông số: `temperature`, `top-K`, `top-P`, `max tokens`
+* Chuyển đổi chế độ sáng tạo nhanh chóng
+* Bật/tắt tính năng AI sinh ảnh, giọng nói
 
-### 🌟 Tính năng độc đáo:
+### 🌟 Các tính năng nâng cao
 
-* 🔄 **AI Morph & Evolve**: Gợi ý nâng cấp mã theo ngữ cảnh.
-* 🔒 **Làm rối JavaScript**: 4 cấp độ từ cơ bản đến AOPs chống đọc mã.
-* 🖼️ **Sinh ảnh từ mô tả**: Biến ý tưởng thành hình ảnh đẹp mắt.
-* 🎤 **Nhận lệnh bằng giọng nói**: Viết code mà không cần gõ.
-* 🧠 **Xóa ngữ cảnh AI**: Làm mới toàn bộ bộ nhớ cuộc trò chuyện.
+* 🔄 **AI Morph & Evolve**: Gợi ý refactor và nâng cấp mã
+* 🛡️ **Rối mã JS**: Chống đọc mã với 4 cấp độ
+* 🎤 **Nhận lệnh bằng giọng nói**: Tương tác rảnh tay
+* 🖼️ **Sinh ảnh từ mô tả văn bản** (text-to-image)
+* 🧽 **Xóa ngữ cảnh**: Làm mới AI trong một click
 
 ---
 
 ## 🔧 Công nghệ sử dụng
 
-| Thành phần                 | Công nghệ                                                 |
-| -------------------------- | --------------------------------------------------------- |
-| Giao diện                  | `HTML5`, `CSS3`, `TypeScript`, `Lit`, `Tailwind`, `p5.js` |
-| Trình biên dịch & Markdown | `Marked`, `Highlight.js`                                  |
-| AI tích hợp                | `@google/genai`, `OpenAI` , `Grok` , ... (qua API Key `.env`)            |
-| Animation & 3D             | `GSAP`, `Three.js`                                        |
+| Thành phần                 | Công nghệ                                                            |
+| -------------------------- | -------------------------------------------------------------------- |
+| Giao diện                  | `HTML5`, `CSS3`, `TypeScript`, `Lit`, `Tailwind`, `p5.js`            |
+| Trình soạn thảo & Markdown | `Marked`, `Highlight.js`                                             |
+| AI tích hợp                | `OpenAI`, `Google GenAI`, `Claude`, `DeepSeek`, `Grok` (qua API Key) |
+| Animation & 3D             | `GSAP`, `Three.js`                                                   |
 
 ---
 
-## 📦 Hướng dẫn sử dụng
+## 📦 Cài đặt & Sử dụng
 
 ```bash
 # 1. Clone dự án
-git clone https://github.com/your-username/btrong-ai.git
+git clone https://github.com/Trongdepzai-dev/AI-Making-Web.git
 
-# 2. Vào thư mục
+# 2. Di chuyển vào thư mục dự án
 cd btrong-ai
 
-# 3. Cài thư viện
+# 3. Cài đặt phụ thuộc
 npm install
 
 # 4. Khởi chạy ứng dụng
 npm run dev
 ```
 
-🔗 Mở trình duyệt: [http://localhost:5173](http://localhost:5173)
+🔗 Truy cập ứng dụng tại: [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 🔐 Ghi chú về API Key
+## 🔐 Cấu hình API Key
 
-* Không có giao diện nhập Key trực tiếp.
-* Dùng `.env .local` để cấu hình:
+> 📁 File cấu hình: `.env .local`
 
-  ```.env .local
-  API_KEY=...           # cho Gemini
-  OPENAI_API_KEY=...    # cho OpenAI
-  CLAUDE_API_KEY=...    # cho Claude
-  LLAMA_API_KEY=...     # cho LLAMA
-  ...
-  ```
+```env
+API_KEY=your_google_genai_key
+OPENAI_API_KEY=your_openai_key
+CLAUDE_API_KEY=your_anthropic_key
+LLAMA_API_KEY=your_meta_llama_key
+```
+
+💡 **Lưu ý:** Không chia sẻ file `.env .local` công khai trên internet.
+
+---
+
+## 🧪 Ví dụ & Demo
+
+| Chế độ        | Mô tả                                        |
+| ------------- | -------------------------------------------- |
+| p5.js Mode    | Mã tạo hình ảnh động theo thuật toán fractal |
+| Siêu Đẹp Mode | Trang portfolio 3D + hiệu ứng cuộn hoạt hình |
+| AI Voice      | Tương tác viết mã bằng giọng nói             |
 
 ---
 
 ## 📜 Giấy phép
 
-📘 **MIT License** – Bạn được tự do sử dụng, chỉnh sửa và chia sẻ. Đừng quên ghi credit nhé!
+**MIT License** – Toàn quyền sử dụng, chỉnh sửa, và phân phối mã nguồn.
+👉 Đừng quên giữ credit khi tái sử dụng trong dự án của bạn.
 
 ---
 
-## 🧑‍💻 Tác giả
+## 🧑‍💻 Tác giả & Liên hệ
 
-**B.Trọng** – Kẻ du hành giữa thế giới AI và nghệ thuật lập trình.
-🌐 [GitHub](https://github.com/Trongdepzai-dev)
-🧠 Luôn tìm kiếm những ý tưởng điên rồ và thử nghiệm mới.
+**B.Trọng** – Nhà lập trình sáng tạo, yêu thích AI, nghệ thuật số và hiệu ứng động.
 
-> 💬 *Bạn có ý tưởng sáng tạo hoặc cần giúp đỡ? Đừng ngại liên hệ!*
+* 🌐 GitHub: [@Trongdepzai-dev](https://github.com/Trongdepzai-dev)
+* 📩 Liên hệ: qua issue hoặc email trong hồ sơ GitHub
+
+> 💬 *Ý tưởng sáng tạo? Góp ý cải tiến? Rất hoan nghênh cộng đồng tham gia!*
 
 ---
 
+🎉 **Cảm ơn bạn đã ghé thăm! Hãy cùng nhau biến AI thành công cụ sáng tạo đích thực.**
 
-
+---
