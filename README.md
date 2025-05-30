@@ -134,12 +134,14 @@ npm run dev
 ## 🔐 Ghi chú về API Key
 
 * Không có giao diện nhập Key trực tiếp.
-* Dùng `.env` để cấu hình:
+* Dùng `.env .local` để cấu hình:
 
-  ```env
+  ```.env .local
   API_KEY=...           # cho Gemini
   OPENAI_API_KEY=...    # cho OpenAI
-  
+  CLAUDE_API_KEY=...    # cho Claude
+  LLAMA_API_KEY=...     # cho LLAMA
+  ...
   ```
 
 ---
