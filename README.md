@@ -3,7 +3,19 @@
 </p>
 
 # ✨ B.Trọng AI
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=600&color=00BFFF&width=350&lines=Status+of+B.Tr%E1%BB%8Dng+AI" alt="Typing SVG" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge" alt="Build Status" />
+  <img src="https://img.shields.io/badge/version-1.0.0-blue?style=for-the-badge" alt="Version" />
+  <img src="https://img.shields.io/badge/license-MIT-orange?style=for-the-badge" alt="License" />
+  <img src="https://img.shields.io/github/languages/code-size/Trongdepzai-dev/AI-Making-Web?style=for-the-badge" alt="Code size" />
+</p>
+
+
+
 
 
 **B.Trọng AI** – *Thế giới nơi mã nguồn và trí tuệ nhân tạo hòa quyện thành nghệ thuật!*
